@@ -1,132 +1,149 @@
-Sure! Here's the updated version of the `README.md` file in English, with flags for the languages used and improved layout:
 
-```markdown
-# Doodle Pro
+# 🔥 🐰 Gold Bunny 🔥 🐰
+**Gold Bunny** é uma plataforma inovadora desenvolvida para otimizar e gerenciar investimentos no ecossistema HoloFi. Com uma interface amigável e intuitiva, o Gold Bunny proporciona aos usuários uma experiência de investimento simples e eficaz.
 
-**Doodle Pro** is a parallel processing application that simulates I/O tasks using multiple threads. The system manages different storage providers (AWS, Azure, Google Cloud, Local) and executes tasks simultaneously to optimize processing time. This project was developed to demonstrate the use of **threads** and **concurrency** in data processing within a simulated environment.
+## Principais Recursos
 
-## Features
+- **Painel de Controle de Investimentos**: Visualização em tempo real do desempenho dos investimentos, retornos e análises detalhadas.
+- **Gerenciamento de Usuários**: Funcionalidades para registro, autenticação e gerenciamento de perfis de usuários.
+- **Análises de Desempenho**: Relatórios extensivos sobre o desempenho dos investimentos e insights do mercado.
+- **Notificações Instantâneas**: Atualizações em tempo real sobre o status dos investimentos e mudanças relevantes.
+- **Design Responsivo**: Interface otimizada para funcionar perfeitamente em desktops, tablets e smartphones.
+- **Comunicações Seguras**: Canais de comunicação privados para transações seguras, garantindo a proteção de dados do usuário.
 
-- Simulates processing tasks across multiple storage providers.
-- Parallel task execution using **DispatchQueue** in Swift to manage multiple threads.
-- Simulates I/O operations with a 2-second delay (representing processing time).
+## Começando
 
-## Technologies Used
+### Requisitos
 
-- **Swift 5** 🇺🇸: The primary language used for implementing the application.
-- **DispatchQueue** 🇺🇸: For managing concurrency and asynchronously executing tasks.
-- **RunLoop** 🇺🇸: To ensure the program continues running until asynchronous tasks are completed.
+Para compilar e executar o **Gold Bunny**, você precisará de:
 
-## Project Structure
+- PHP 7.3 ou superior
+- Composer
+- Laravel
+- Node.js (para compilar ativos)
 
-- **ProcessingTask.swift**: Defines the structure that stores information about the processing task.
-- **Main.swift**: Contains the main function that creates and manages tasks, as well as executes parallel processing.
-- **README.md**: This explanatory document.
+### Instalação
 
-## How to Run
+Siga estes passos para configurar o projeto:
 
-### Requirements
+1. **Clone o repositório:**
 
-- Xcode installed (recommended for Swift development).
-- Operating System: macOS or any system that supports Swift.
-
-### Steps
-
-1. Clone the repository:
    ```bash
-   git clone https://github.com/your_username/doodle-pro.git
+   git clone https://github.com/seuusuario/gold-bunny.git
+   cd gold-bunny
    ```
 
-2. Open the project in Xcode.
+2. **Instale as dependências com o Composer:**
 
-3. Build and run the project in Xcode.
-
-4. The program will create 4 threads and simulate processing tasks from different storage providers. Output will be printed in the Xcode console.
-
-## Example Output
-
-```bash
-Thread 0: Processing data in AWS at path s3://my-bucket/data
-Thread 1: Processing data in Azure at path azure://my-container/data
-Thread 2: Processing data in Google Cloud at path gcs://my-bucket/data
-Thread 3: Processing data in Local at path /local/disk/path
-
-Thread 0: Finished processing in AWS
-Thread 1: Finished processing in Azure
-Thread 2: Finished processing in Google Cloud
-Thread 3: Finished processing in Local
-
-Main: All threads finished.
-```
-
-## Comparative Graphs
-
-Below are some charts comparing **Doodle Pro**'s performance with other engines:
-
-### Execution Time by Storage Provider
-
-The chart below compares the execution time for simulated tasks across different storage providers using **Doodle Pro** and other engines like **AWS Lambda**, **Google Cloud Functions**, and **Azure Functions**.
-
-![Execution Time Comparison](images/execution_time_comparison.png)
-
-### Parallel Processing Performance
-
-This chart compares **Doodle Pro** with other parallel processing engines based on the number of tasks processed per second.
-
-![Parallel Processing Performance](images/parallel_processing_performance.png)
-
-### Memory Usage Analysis
-
-This chart compares memory usage between **Doodle Pro** and other engines when processing multiple tasks simultaneously.
-
-![Memory Comparison](images/memory_comparison.png)
-
-## Contribution
-
-Contributions are welcome! If you have suggestions, improvements, or fixes, feel free to open a **pull request**.
-
-### Steps to contribute
-
-1. Fork the repository.
-2. Create a new **branch** for your changes.
-3. Make the necessary changes and submit a **pull request**.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-```
-
-### Adding Flags for Languages
-
-In this updated version, I’ve added 🇺🇸 (USA flag) next to the technologies used (Swift and DispatchQueue) to indicate the programming languages. You can easily add other flags depending on the programming languages you use, for example:
-
-- 🇺🇸 for English-based languages (like Swift, Python, JavaScript, etc.).
-- 🇧🇷 for Portuguese, 🇪🇸 for Spanish, and so on, depending on the content.
-
-### How to Add Images:
-
-1. **Add images to the repository**: Create a folder called `images` or any other desired name to store the images in your repository. Place the images you want to compare, such as graphs and screenshots, in this folder.
-   
-2. **Link the images in `README.md`**: Use the markdown syntax `![alt text](path_to_image)` to add images to your `README.md`. For example:
-
-   ```markdown
-   ![Execution Time Comparison](images/execution_time_comparison.png)
+   ```bash
+   composer install
    ```
 
-3. **Ensure images are optimized**: To avoid making the repository too large, compress the images (e.g., PNG or JPEG with good quality) before uploading.
+3. **Crie um arquivo `.env` e configure suas variáveis de ambiente:**
 
-### Creating Comparative Graphs
+   ```bash
+   cp .env.example .env
+   ```
 
-For the comparative graphs, you can use tools such as **Matplotlib** (Python), **Excel**, or **Google Sheets**, and then export the results as images to include them in your `README.md`.
+4. **Gere a chave da aplicação:**
 
-Here are some graph types you could use:
+   ```bash
+   php artisan key:generate
+   ```
 
-- **Bar Chart**: For showing execution time across different storage providers.
-- **Line Chart**: For comparing parallel processing performance in different engines.
-- **Pie Chart or Stacked Bar Chart**: For visualizing memory usage across engines.
+5. **Configure o banco de dados no arquivo `.env`.** Forneça detalhes como tipo de banco de dados, nome, usuário e senha.
 
-Once you generate these graphs, save them as images and upload them to your repository under the `images` folder.
+6. **Execute as migrações para criar tabelas no banco de dados:**
 
-### Conclusion
+   ```bash
+   php artisan migrate
+   ```
 
-This README provides a comprehensive overview of your project in English, with added visualizations to compare performance with other engines. You can further customize it based on additional features or improvements you make to the project. Let me know if you need further adjustments!
+7. **Inicie o servidor de desenvolvimento:**
+
+   ```bash
+   php artisan serve
+   ```
+
+8. **Compile os ativos usando o Laravel Mix:**
+
+   ```bash
+   npm install
+   npm run dev
+   ```
+
+### Executando o Programa
+
+Após a instalação, acesse a aplicação em [http://localhost:8000](http://localhost:8000) e siga as instruções para registrar e começar a usar o sistema.
+
+### Exemplo de Saída
+
+Ao executar a aplicação, você encontrará uma interface limpa e intuitiva, permitindo visualizar e gerenciar seus investimentos de maneira eficaz.
+
+## Arquitetura
+
+A arquitetura do Gold Bunny consiste em:
+
+1. **Camada de Apresentação**: Interface do usuário desenvolvida com HTML, CSS e JavaScript.
+2. **Camada de Controle**: Controladores do Laravel que gerenciam solicitações e interações dos usuários.
+3. **Camada de Dados**: Banco de dados que armazena informações sobre usuários, investimentos e análises.
+
+## Estrutura do Projeto
+
+O projeto está organizado da seguinte forma:
+
+```plaintext
+gold-bunny/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   ├── Models/
+├── resources/
+│   ├── views/
+│   ├── css/
+│   ├── js/
+├── routes/
+│   ├── web.php
+├── database/
+│   ├── migrations/
+├── .env.example
+├── composer.json
+└── package.json
+```
+
+## Melhorias Futuras
+
+- **Integração de Machine Learning**: Futuras atualizações incluirão recursos de aprendizado de máquina para análises preditivas.
+- **Otimização da Interface do Usuário**: Atualizações contínuas para melhorar a experiência do usuário.
+- **Suporte Multilíngue**: Inclusão de suporte para várias línguas na interface.
+- **Recursos Aprimorados de Segurança**: Desenvolvimentos adicionais para fortalecer a segurança das transações.
+
+## Licença
+
+Este projeto é licenciado sob a [Apache License 2.0](LICENSE) - consulte o arquivo [LICENSE](LICENSE) para detalhes.
+
+## Contribuindo
+
+Pull requests são bem-vindos. Para alterações significativas, por favor abra uma issue primeiro para discutir o que você gostaria de mudar.
+
+## Contato
+
+NSC > IG @NSCI.O
+
+## Bandeiras de Linguagem
+
+Aqui estão as bandeiras de linguagem usadas neste projeto:
+
+- **PHP**: ![PHP](https://img.shields.io/badge/PHP-%2378B9FA.svg?style=flat&logo=php&logoColor=white)
+- **JavaScript**: ![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=flat&logo=javascript&logoColor=white)
+- **HTML**: ![HTML](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat&logo=html5&logoColor=white)
+- **CSS**: ![CSS](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat&logo=css3&logoColor=white)
+- **Laravel**: ![Laravel](https://img.shields.io/badge/Laravel-%23FF2D20.svg?style=flat&logo=laravel&logoColor=white)
+- **C**: ![C](https://img.shields.io/badge/C-%2300599C.svg?style=flat&logo=c&logoColor=white)
+- **ESQL**: ![ESQL](https://img.shields.io/badge/ESQL-%231F4F7E.svg?style=flat&logo=esql&logoColor=white)
+- **NSC-ABC**: ![NSC-ABC](https://img.shields.io/badge/NSC-ABC-%2300599C.svg?style=flat&logo=nsc&logoColor=white)
+- **Rubyx**: ![Rubyx](https://img.shields.io/badge/Rubyx-%23CC342D.svg?style=flat&logo=ruby&logoColor=white)
+- **Shell**: ![Shell](https://img.shields.io/badge/Shell-%231DAE89.svg?style=flat&logo=gnu-bash&logoColor=white)
+- **Python**: ![Python](https://img.shields.io/badge/Python-%2338A1F3.svg?style=flat&logo=python&logoColor=white)
+- **Lua**: ![Lua](https://img.shields.io/badge/Lua-%232C2D72.svg?style=flat&logo=lua&logoColor=white)
+- **Dart**: ![Dart](https://img.shields.io/badge/Dart-%230175C2.svg?style=flat&logo=dart&logoColor=white)
