@@ -1,4 +1,3 @@
-Here's a more vibrant and emoji-filled version of your `README.md` for Doodle Pro, with language flags and added icons:
 
 ```markdown
 # Doodle Pro 🚀
